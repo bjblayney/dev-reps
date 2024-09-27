@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/bjblayney/dev-reps/static/css/main.3fefa6ae.css",
+    "main.js": "/bjblayney/dev-reps/static/js/main.dd51d491.js",
+    "index.html": "/bjblayney/dev-reps/index.html",
+    "main.3fefa6ae.css.map": "/bjblayney/dev-reps/static/css/main.3fefa6ae.css.map",
+    "main.dd51d491.js.map": "/bjblayney/dev-reps/static/js/main.dd51d491.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3fefa6ae.css",
+    "static/js/main.dd51d491.js"
+  ]
+}
