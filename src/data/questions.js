@@ -14,7 +14,7 @@ export const questions = [
       'It updates the state of the component.',
       'It renders the component.',
     ],
-    correctAnswer: 3,
+    correctAnswer: 1,
     explanation:
       "'useEffect' allows you to perform side effects in function components, like fetching data or updating the DOM. It runs after the render and can optionally clean up after itself by returning a function. This hook is essential for managing side effects such as subscriptions, timers, and logging.",
   },
@@ -38,7 +38,7 @@ export const questions = [
       '`var` and `let` can be reassigned, while `const` cannot.',
       '`let` and `var` are hoisted, but `const` is not.',
     ],
-    correctAnswer: 2,
+    correctAnswer: 1,
     explanation:
       '`let` and `const` have block scope, while `var` has function scope. This means that `let` and `const` are only accessible within the block they are defined in, whereas `var` is accessible within the entire function. Additionally, `const` cannot be reassigned after its initial declaration, making it useful for defining constants. `var` and `let` are hoisted to the top of their scope, but `let` and `const` are not initialized until their definition is evaluated.',
   },
@@ -627,7 +627,7 @@ export const questions = [
 
   // Soft Skills
   {
-    question: 'Why are effective communication skills important for a senior front-end developer?',
+    question: 'Why are effective communication skills important for a developer?',
     options: [
       'They help in writing cleaner code.',
       'They facilitate better collaboration with team members and stakeholders.',
@@ -636,10 +636,10 @@ export const questions = [
     ],
     correctAnswer: 1,
     explanation:
-      'Effective communication skills enable senior developers to collaborate efficiently with team members, understand project requirements, and convey technical concepts to non-technical stakeholders.',
+      'Effective communication skills enable developers to collaborate efficiently with team members, understand project requirements, and convey technical concepts to non-technical stakeholders.',
   },
   {
-    question: 'Which of the following is a key aspect of problem-solving for senior developers?',
+    question: 'Which of the following is a key aspect of problem-solving for developers?',
     options: [
       'Copying solutions from online resources.',
       'Identifying root causes and developing efficient solutions.',
@@ -648,7 +648,7 @@ export const questions = [
     ],
     correctAnswer: 1,
     explanation:
-      'Senior developers excel at identifying the root causes of issues and devising efficient, scalable solutions, often involving critical thinking and collaboration.',
+      'Developers excel at identifying the root causes of issues and devising efficient, scalable solutions, often involving critical thinking and collaboration.',
   },
 
   // Additional Topics
@@ -784,9 +784,6 @@ export const questions = [
     explanation:
       'A systematic debugging approach involves isolating components, using debugging tools (like browser dev tools), and methodically testing to identify and resolve complex issues efficiently.',
   },
-
-  // Resources (No specific questions, but could add resource-related questions if needed)
-
   // Additional Systems Design Questions
   {
     question: 'What is horizontal scaling in the context of system architecture?',
