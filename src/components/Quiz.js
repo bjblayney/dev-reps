@@ -28,6 +28,7 @@ const Quiz = () => {
   useEffect(() => {
     const shuffledQuestions = shuffleArray(initialQuestions).slice(0, 15); // Take only the first 15 questions
     setQuestions(shuffledQuestions);
+    console.log(shuffledQuestions);
   }, []);
 
   const currentQuestion = questions.length > 0 ? questions[currentQuestionIndex] : null;
