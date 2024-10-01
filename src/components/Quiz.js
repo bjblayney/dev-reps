@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { questions as initialQuestions } from '../data/questions';
-import { Button, Typography, Box, RadioGroup, FormControlLabel, Radio, Fade, Grow, IconButton } from '@mui/material';
+import { Button, Typography, Box, RadioGroup, FormControlLabel, Radio, Fade, Grow, IconButton, useMediaQuery } from '@mui/material';
 import Grid from '@mui/material/Grid2';
 import VolumeUpIcon from '@mui/icons-material/VolumeUp';
 import VolumeOffIcon from '@mui/icons-material/VolumeOff';
@@ -14,21 +14,21 @@ const shuffleArray = (array) => {
   return shuffledArray;
 };
 
-const Quiz = () => {
+const Quiz = (props) => {
+  const { score, setScore } = props;
   const [questions, setQuestions] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [showExplanation, setShowExplanation] = useState(false);
   const [isCorrect, setIsCorrect] = useState(null);
-  const [score, setScore] = useState(0);
+
   const [quizCompleted, setQuizCompleted] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
-
+  const isMobile = useMediaQuery((theme) => theme.breakpoints.down('sm'));
   // Shuffle questions when the component mounts and select 15 random questions
   useEffect(() => {
     const shuffledQuestions = shuffleArray(initialQuestions).slice(0, 15); // Take only the first 15 questions
     setQuestions(shuffledQuestions);
-    console.log(shuffledQuestions);
   }, []);
 
   const currentQuestion = questions.length > 0 ? questions[currentQuestionIndex] : null;
@@ -154,25 +154,13 @@ const Quiz = () => {
   return (
     <>
       <Box
-        position="absolute"
-        top={{ xs: 96, sm: 16 }} // Move down on mobile screens
-        right={{ xs: 8, sm: 16 }} // Adjust right margin on mobile screens
-        p={{ xs: 1, sm: 2 }} // Smaller padding on mobile screens
-        bgcolor="primary.main"
-        color="white"
-        borderRadius={4}
-      >
-        <Typography variant="h6" fontSize={{ xs: '1rem', sm: '1.25rem' }}>
-          Score: {score} / {questions.length}
-        </Typography>
-      </Box>
-      <Box
         sx={{
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          height: 'calc(100vh - 108px)',
+          height: 'calc(100vh - 250px)',
           position: 'relative',
+          paddingTop: '140px',
         }}
       >
         <Box
@@ -184,12 +172,23 @@ const Quiz = () => {
             width: '100%',
           }}
         >
-          <Typography variant="h5" gutterBottom>
+          <Typography variant="h5" sx={{ marginBottom: `1rem` }}>
             {currentQuestion.question}
           </Typography>
           <RadioGroup name="quiz-options" value={selectedAnswer !== null ? selectedAnswer.toString() : ''} onChange={handleAnswerSelect}>
             {currentQuestion.options.map((option, index) => (
-              <FormControlLabel key={index} value={index.toString()} control={<Radio />} label={option} />
+              <FormControlLabel
+                key={index}
+                value={index.toString()}
+                control={<Radio />}
+                label={option}
+                sx={{
+                  // Apply different font sizes based on the screen size
+                  '& .MuiTypography-root': {
+                    fontSize: isMobile ? '0.875rem' : '1rem', // Adjust these values as needed
+                  },
+                }}
+              />
             ))}
           </RadioGroup>
 

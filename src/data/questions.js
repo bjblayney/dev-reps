@@ -334,4 +334,197 @@ export const questions = [
     explanation:
       'In state management, "immutable" means that once the state is set, it cannot be changed directly. Instead, any updates to the state result in the creation of a new state object. This approach helps prevent unintended side effects and makes state changes more predictable and easier to track.',
   },
+  {
+    question: 'What is the primary purpose of using Docker in a development workflow?',
+    options: [
+      'To manage database migrations.',
+      'To containerize applications for consistent environments across development and production.',
+      'To automate front-end testing.',
+      'To monitor application performance in real-time.',
+    ],
+    correctAnswer: 1,
+    explanation:
+      'Docker is used to containerize applications, allowing developers to create consistent environments across different stages of development and production. Containers encapsulate all the dependencies and configurations needed to run the application, ensuring that it behaves the same regardless of where it is deployed.',
+  },
+  {
+    question: 'In a RESTful API, which HTTP method is typically used to partially update a resource?',
+    options: ['GET', 'POST', 'PUT', 'PATCH'],
+    correctAnswer: 3,
+    explanation:
+      'The PATCH HTTP method is used to apply partial modifications to a resource. Unlike PUT, which replaces the entire resource, PATCH allows for updating only specific fields, making it more efficient for partial updates.',
+  },
+  {
+    question: 'Which SQL statement is used to retrieve data from a database?',
+    options: ['INSERT', 'UPDATE', 'SELECT', 'DELETE'],
+    correctAnswer: 2,
+    explanation:
+      'The SELECT statement is used in SQL to retrieve data from one or more tables in a database. It allows specifying the exact columns and rows to fetch based on certain conditions.',
+  },
+  {
+    question: 'What is JWT commonly used for in web applications?',
+    options: [
+      'Styling components dynamically.',
+      'Managing database transactions.',
+      'Handling user authentication and authorization.',
+      'Optimizing image loading.',
+    ],
+    correctAnswer: 2,
+    explanation:
+      'JWT (JSON Web Token) is commonly used for securely transmitting information between parties as a JSON object. It is widely used for authentication and authorization, allowing servers to verify the identity of clients and grant access to protected resources.',
+  },
+  {
+    question: 'Which of the following is a NoSQL database?',
+    options: ['PostgreSQL', 'MySQL', 'MongoDB', 'SQLite'],
+    correctAnswer: 2,
+    explanation:
+      'MongoDB is a popular NoSQL database that stores data in flexible, JSON-like documents. Unlike traditional SQL databases, NoSQL databases like MongoDB are designed to handle large volumes of unstructured or semi-structured data.',
+  },
+  {
+    question: 'What does CI/CD stand for in the context of DevOps?',
+    options: [
+      'Continuous Integration/Continuous Deployment',
+      'Code Inspection/Code Development',
+      'Continuous Improvement/Continuous Delivery',
+      'Code Integration/Code Deployment',
+    ],
+    correctAnswer: 0,
+    explanation:
+      'CI/CD stands for Continuous Integration and Continuous Deployment. It refers to the practices of frequently integrating code changes into a shared repository (CI) and automatically deploying those changes to production or staging environments (CD), enabling faster and more reliable software releases.',
+  },
+  {
+    question: 'In Git, what is the purpose of a "branch"?',
+    options: [
+      'To store binary files separately from the main codebase.',
+      'To allow multiple developers to work on different features or fixes simultaneously without affecting the main codebase.',
+      'To merge code from different repositories.',
+      'To deploy code to production servers.',
+    ],
+    correctAnswer: 1,
+    explanation:
+      'A branch in Git allows developers to diverge from the main codebase to work on features, bug fixes, or experiments independently. This isolation ensures that changes can be developed and tested without impacting the stable main branch, facilitating collaborative workflows and version control.',
+  },
+  {
+    question: 'What is the role of an ORM (Object-Relational Mapping) tool in backend development?',
+    options: [
+      'To map frontend components to backend services.',
+      'To translate data between incompatible type systems in object-oriented programming languages and relational databases.',
+      'To manage API routes and endpoints.',
+      'To optimize server performance through caching.',
+    ],
+    correctAnswer: 1,
+    explanation:
+      'An ORM (Object-Relational Mapping) tool allows developers to interact with a relational database using the programming language’s native objects and methods. It abstracts the database interactions, enabling CRUD operations without writing raw SQL queries, thereby simplifying data manipulation and reducing boilerplate code.',
+  },
+  {
+    question: 'Which AWS service is primarily used for object storage?',
+    options: ['Amazon EC2', 'Amazon RDS', 'Amazon S3', 'Amazon Lambda'],
+    correctAnswer: 2,
+    explanation:
+      'Amazon S3 (Simple Storage Service) is AWS’s primary service for object storage. It provides scalable, secure, and durable storage for a wide range of data types, including backups, media files, and static website assets.',
+  },
+  {
+    question: 'What is the main advantage of using GraphQL over REST for API development?',
+    options: [
+      'GraphQL automatically handles authentication.',
+      'GraphQL allows clients to request exactly the data they need, reducing over-fetching or under-fetching of data.',
+      'GraphQL is easier to implement than REST.',
+      'GraphQL does not require a server to operate.',
+    ],
+    correctAnswer: 1,
+    explanation:
+      'GraphQL provides clients with the ability to specify exactly what data they need in a single request. This flexibility minimizes the issues of over-fetching (receiving more data than needed) and under-fetching (not receiving enough data), which are common challenges in RESTful APIs that rely on fixed endpoints and responses.',
+  },
+  {
+    question: 'In the context of web security, what is CSRF?',
+    options: [
+      'Cross-Site Request Forgery, a type of attack that tricks a user into performing actions they did not intend.',
+      'Cross-Site Rendering Framework, a tool for building secure web pages.',
+      'Client-Side Resource Failure, an issue where client resources fail to load.',
+      'Centralized Security Reference Framework, a standard for web security.',
+    ],
+    correctAnswer: 0,
+    explanation:
+      'CSRF (Cross-Site Request Forgery) is a security vulnerability that allows an attacker to trick a user into performing actions on a web application in which they are authenticated, without their consent. Implementing CSRF tokens and verifying them on the server side are common mitigation strategies.',
+  },
+  {
+    question: 'What is the purpose of Kubernetes in a microservices architecture?',
+    options: [
+      'To serve as a programming language for microservices.',
+      'To provide a container orchestration platform for deploying, scaling, and managing containerized applications.',
+      'To store microservices configurations.',
+      'To handle API gateway functionalities.',
+    ],
+    correctAnswer: 1,
+    explanation:
+      'Kubernetes is a powerful container orchestration system that automates the deployment, scaling, and management of containerized applications. In a microservices architecture, Kubernetes helps manage the complexity of running multiple services by handling tasks like service discovery, load balancing, and rolling updates.',
+  },
+  {
+    question: 'Which HTTP status code indicates a successful request that resulted in the creation of a resource?',
+    options: ['200 OK', '201 Created', '204 No Content', '400 Bad Request'],
+    correctAnswer: 1,
+    explanation:
+      'The HTTP status code 201 Created indicates that the request has been successfully fulfilled and has led to the creation of a new resource. It is typically used in response to POST requests that result in the creation of a new resource on the server.',
+  },
+  {
+    question: 'What is the primary function of Redis in a web application stack?',
+    options: [
+      'To serve as a primary relational database.',
+      'To act as an in-memory data structure store used for caching, session management, and real-time analytics.',
+      'To handle HTTP request routing.',
+      'To provide user authentication services.',
+    ],
+    correctAnswer: 1,
+    explanation:
+      'Redis is an in-memory data store that is often used for caching to improve application performance, managing user sessions, and handling real-time data analytics. Its speed and versatility make it a valuable component in many web application architectures.',
+  },
+  {
+    question: 'What is the purpose of using environment variables in a full-stack application?',
+    options: [
+      'To style components dynamically based on the environment.',
+
+      'To manage user sessions securely.',
+      'To optimize application performance.',
+      'To store configuration settings and sensitive information outside of the codebase.',
+    ],
+    correctAnswer: 3,
+    explanation:
+      'Environment variables are used to store configuration settings, API keys, database credentials, and other sensitive information outside of the codebase. This practice enhances security, allows for different configurations across environments (development, staging, production), and simplifies deployment processes.',
+  },
+  {
+    question: 'In the context of RESTful APIs, what does “stateless” mean?',
+    options: [
+      'The server does not store any client context between requests.',
+      'The API does not use any form of authentication.',
+      'The client maintains all session data on the server.',
+      'The API can only handle one request at a time.',
+    ],
+    correctAnswer: 0,
+    explanation:
+      'A stateless API means that each client request contains all the information needed to process the request, and the server does not store any session or context between requests. This design simplifies scalability and reliability, as each request can be handled independently.',
+  },
+  {
+    question: 'What is the purpose of using a reverse proxy in a web application architecture?',
+    options: [
+      'To serve static files directly to clients.',
+
+      'To handle database queries efficiently.',
+      'To distribute incoming client requests to multiple backend servers, providing load balancing and enhanced security.',
+      'To manage user authentication and authorization.',
+    ],
+    correctAnswer: 2,
+    explanation:
+      'A reverse proxy acts as an intermediary for client requests, distributing them across multiple backend servers. This setup provides load balancing, improves performance, enhances security by hiding the backend infrastructure, and can handle tasks like SSL termination and caching.',
+  },
+  {
+    question: 'Which of the following best describes a monolithic architecture?',
+    options: [
+      'An architecture where the application is divided into small, independent services.',
+      'An architecture where the entire application is built as a single, unified unit.',
+      'An architecture that relies solely on serverless functions.',
+      'An architecture that uses peer-to-peer communication between components.',
+    ],
+    correctAnswer: 1,
+    explanation:
+      'A monolithic architecture builds the entire application as a single, cohesive unit where all components are interconnected and interdependent. While simpler to develop initially, it can become complex to maintain and scale as the application grows, compared to microservices architectures that promote modularity and scalability.',
+  },
 ];
